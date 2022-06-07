@@ -1,6 +1,5 @@
 .Container {
   width: 500px;
-  min-height: 600px;
   overflow: auto;
   border: 5px solid #01f25a;
   border-radius: 10px;
