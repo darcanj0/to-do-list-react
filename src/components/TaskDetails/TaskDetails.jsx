@@ -1,14 +1,14 @@
 import "./TaskDetails.css";
 
 import Button from "components/Button/Button";
-import { useParams, useHistory } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 const TaskDetails = () => {
   const params = useParams();
 
-  const history = useHistory();
+  const navigate = useNavigate();
   const handleGoBackClick = () => {
-    history.goBack();
+    navigate("/");
   };
 
   return (

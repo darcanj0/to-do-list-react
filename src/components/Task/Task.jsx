@@ -1,6 +1,6 @@
 import "./Task.css";
 
-import { useHistory, Link } from "react-router-dom";
+import { useNavigate} from "react-router-dom";
 
 const Task = ({
   title,
@@ -9,10 +9,10 @@ const Task = ({
   identity,
   handleTaskDeletion,
 }) => {
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const handleTaskDetailsClick = () => {
-    history.push(`/${title}`);
+    navigate(`/${title}`);
   };
 
   return (
