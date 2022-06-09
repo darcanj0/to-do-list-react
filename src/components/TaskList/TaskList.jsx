@@ -1,5 +1,5 @@
 import "./TaskList.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
 import Add from "components/Add/Add";
@@ -43,18 +43,6 @@ const TaskList = () => {
     const newTasks = taskList.filter((task) => task.id !== taskId);
     setTaskList(newTasks);
   };
-
-  const fetchTaskList = async () => {
-    const response = await fetch(
-      "https://jsonplaceholder.cypress.io/todos?_limit=10"
-    );
-    const taskList = await response.json();
-    setTaskList(taskList);
-  };
-
-  useEffect(() => {
-    fetchTaskList();
-  }, []);
 
   return (
     <>
